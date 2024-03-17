@@ -10,7 +10,7 @@ WORKDIR /
 # Update and upgrade the system packages (Worker Template)
 RUN apt-get update && \
     apt-get upgrade -y && \
-    apt install -y \
+    apt-get install -y \
     fonts-dejavu-core rsync git jq moreutils aria2 wget libgoogle-perftools-dev procps && \
     apt-get autoremove -y && rm -rf /var/lib/apt/lists/* && apt-get clean -y
 
